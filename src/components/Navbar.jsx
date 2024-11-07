@@ -17,7 +17,7 @@ function Navbar() {
     const handleSearch = () => console.log('Searching for:', searchQuery);
 
     return (
-        <div className="bg-gray-100 p-3 shadow-sm">
+        <div className="bg-gray-100 p-3 shadow-sm fixed top-0 left-0 w-full z-10">
             <nav className="flex items-center justify-between w-full">
                 {/* Left Side */}
                 <div className="flex items-center space-x-3 flex-grow">

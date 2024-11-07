@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { IoMdArrowDropdown, IoMdAdd, IoMdAnalytics, IoMdListBox, IoMdCheckmarkCircle, IoMdBriefcase, IoMdHome, IoMdFlask } from 'react-icons/io';
 import { CiUser } from 'react-icons/ci';
 import Hero from './Hero';
-import Patient from './Patient';
 
 function SidebarMenu() {
     const [isTestsDropdownOpen, setIsTestsDropdownOpen] = useState(false);
@@ -14,7 +13,7 @@ function SidebarMenu() {
     return (
         <div className="flex">
             {/* Desktop version */}
-            <div className="h-screen w-64 bg-gray-100 text-black flex-col p-2 hidden md:flex">
+            <div className=" w-64 bg-gray-100 text-black flex-col p-2 hidden md:flex">
                 <ul className="space-y-2">
                     {/* Desktop Menu */}
                     <li className="group hover:bg-blue-500 p-1 rounded">

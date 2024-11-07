@@ -5,7 +5,10 @@ export default function App() {
   return (
     <>
     <Navbar/>
-    <SidebarMenu />
+      <div className="mt-[52px]">
+        <SidebarMenu />
+    </div>
+    
     </>
   )
 }
