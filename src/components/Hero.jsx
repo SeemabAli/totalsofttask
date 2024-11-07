@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Hero() {
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [inputValue, setInputValue] = useState('');
-    const [activeField, setActiveField] = useState(''); 
+    const [activeField, setActiveField] = useState('');
 
     const toggleDialog = (field) => {
-        setActiveField(field); 
+        setActiveField(field);
         setDialogOpen(!isDialogOpen);
     };
 
@@ -18,7 +17,7 @@ function Hero() {
 
     const handleSubmit = () => {
         console.log(`${activeField} Value:`, inputValue);
-        setInputValue(''); 
+        setInputValue('');
         setDialogOpen(false);
     };
 
@@ -43,9 +42,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
-
-            {/* New Div below the search bar */}
-            <div className="overflow-x-auto ">
+            <div className="overflow-x-auto">
                 <div className="flex flex-wrap w-full gap-4">
                     {/* Patient ID Section */}
                     <div className="px-6 sm:w-1/3 w-full">
@@ -72,7 +69,7 @@ function Hero() {
                             <p className="font-bold w-full sm:w-auto">
                                 <span className="text-red-600">*</span>Gender
                             </p>
-                            <div className="flex space-x-4 ">
+                            <div className="flex space-x-4">
                                 <label className="flex items-center">
                                     <input type="radio" name="gender" value="Male" className="" /> Male
                                 </label>
