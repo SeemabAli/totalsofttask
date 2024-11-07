@@ -3,13 +3,13 @@ import { FaSearch } from 'react-icons/fa';
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Hero() {
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [isDialogOpen, setDialogOpen] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [activeField, setActiveField] = useState(''); 
 
-    const toggleModal = (field) => {
+    const toggleDialog = (field) => {
         setActiveField(field); 
-        setModalOpen(!isModalOpen);
+        setDialogOpen(!isDialogOpen);
     };
 
     const handleInputChange = (e) => {
@@ -19,7 +19,7 @@ function Hero() {
     const handleSubmit = () => {
         console.log(`${activeField} Value:`, inputValue);
         setInputValue(''); 
-        setModalOpen(false);
+        setDialogOpen(false);
     };
 
     return (
@@ -172,7 +172,7 @@ function Hero() {
                             <div className="flex items-center">
                                 <input type="text" className="border border-gray-300 rounded-md w-full" />
                                 <button
-                                    onClick={() => toggleModal('Sample Collector')}
+                                    onClick={() => toggleDialog('Sample Collector')}
                                     className="ml-2 flex justify-center items-center font-extrabold text-white text-sm bg-blue-600 px-2 py-1 h-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 >
                                     +
@@ -190,7 +190,7 @@ function Hero() {
                             <div className="flex items-center">
                                 <input type="text" className="border border-gray-300 rounded-md w-full" />
                                 <button
-                                    onClick={() => toggleModal('Organization')}
+                                    onClick={() => toggleDialog('Organization')}
                                     className="ml-2 flex justify-center items-center font-extrabold text-white text-sm bg-blue-600 px-2 py-1 h-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 >
                                     +
@@ -208,7 +208,7 @@ function Hero() {
                             <div className="flex items-center">
                                 <input type="text" className="border border-gray-300 rounded-md w-full" />
                                 <button
-                                    onClick={() => toggleModal('Collected At')}
+                                    onClick={() => toggleDialog('Collected At')}
                                     className="ml-2 flex justify-center items-center font-extrabold text-white text-sm bg-blue-600 px-2 py-1 h-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 >
                                     +
@@ -219,8 +219,8 @@ function Hero() {
                 </div>
             </div>
 
-            {/* Modal for input */}
-            {isModalOpen && (
+            {/* Dialog for input */}
+            {isDialogOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-md w-96">
                         <h3 className="font-bold text-xl mb-4">Enter {activeField}</h3>
@@ -234,7 +234,7 @@ function Hero() {
                             <button onClick={handleSubmit} className="bg-blue-600 text-white py-2 px-4 rounded-md">
                                 Submit
                             </button>
-                            <button onClick={() => setModalOpen(false)} className="bg-gray-300 py-2 px-4 rounded-md">
+                            <button onClick={() => setDialogOpen(false)} className="bg-gray-300 py-2 px-4 rounded-md">
                                 Cancel
                             </button>
                         </div>

@@ -19,6 +19,7 @@ function Navbar() {
     return (
         <div className="bg-gray-100 p-3 shadow-sm">
             <nav className="flex items-center justify-between w-full">
+                {/* Left Side */}
                 <div className="flex items-center space-x-3 flex-grow">
                     <FaArrowLeft className="text-gray-600 cursor-pointer text-base" />
                     <div className="flex items-center space-x-2 flex-grow">
@@ -33,11 +34,15 @@ function Navbar() {
                         </button>
                     </div>
                 </div>
+
+                {/* Mobile Menu Button */}
                 <div className="sm:hidden">
                     <button onClick={toggleMobileMenu} className="text-gray-600">
                         {isMobileMenuOpen ? <HiOutlineX size={24} /> : <HiOutlineMenu size={24} />}
                     </button>
                 </div>
+
+                {/* Desktop Menu */}
                 <div className={`hidden sm:flex sm:items-center sm:space-x-3 ${isMobileMenuOpen ? 'hidden' : 'block'}`}>
                     <button type="button" className="flex items-center space-x-1 text-gray-600 hover:text-blue-500 border border-gray-300 rounded-md px-2 py-1">
                         <span className="text-sm">Openlabs.pk</span>
@@ -81,6 +86,8 @@ function Navbar() {
                     </button>
                 </div>
             </nav>
+
+            {/* Mobile Menu */}
             <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden mt-3`}>
                 <div className="flex flex-col space-y-3">
                     <button type="button" className="flex items-center text-gray-600 hover:text-blue-500 px-2 py-1">
