@@ -164,7 +164,7 @@ function Hero() {
                     <div className="px-6 sm:w-1/3 w-1/3">
                         <div>
                             <p className="font-bold">
-                                <span className="text-red-600">*</span>Select Sample Collector
+                                <span className="text-red-600">*</span>Sample Collector
                             </p>
                             <div className="flex items-center">
                                 <input type="text" className="border border-gray-300 rounded-md w-full" />
