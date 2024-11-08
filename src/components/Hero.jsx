@@ -36,7 +36,7 @@ function Hero() {
                             />
                             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
                         </div>
-                        <button className="text-white text-sm bg-blue-600 px-6 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <button className="text-white text-sm bg-blue-600 px-6 py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
                             Quotation
                         </button>
                     </div>
