@@ -19,7 +19,7 @@ function Navbar() {
     return (
         <div className="bg-gray-100 p-3 shadow-sm fixed top-0 left-0 w-full z-10">
             <nav className="flex items-center justify-between w-full">
-                {/* Left Side */}
+                {/* Arrow Button Search */}
                 <div className="flex items-center space-x-3 flex-grow">
                     <FaArrowLeft className="text-gray-600 cursor-pointer text-base" />
                     <div className="flex items-center space-x-2 flex-grow">
